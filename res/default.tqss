@@ -1,0 +1,728 @@
+-*
+box:box();
+font:font();
+gridline-color::color();
+-QWidget
+background-color:color();
+background-image:url();
+background-repeat:repeat();
+background-position:alignment();
+background-clip:origin();
+background-origin:origin();
+-QAbstractScrollArea
+box:box();
+-QAbstractItemView
+box:box();
+font:font();
+-QAbstractButton
+box:box();
+min-width:int(-1, 999)[px]off;
+min-height:int(-1, 999)[px]off;
+font:font();
+-QAbstractSlider
+box:box();
+-QAbstractSpinBox
+box:box();
+-QAbstractSpinBox::up-button
+box:box();
+width:int(-1, 99)[px]off;
+-QAbstractSpinBox::down-button
+box:box();
+width:int(-1, 99)[px]off;
+-QAbstractSpinBox::up-arrow
+image: url();
+width:int(-1, 99)[px]off;
+height:int(-1, 99)[px]off;
+-QAbstractSpinBox::down-arrow
+image: url();
+width:int(-1, 99)[px]off;
+height:int(-1, 99)[px]off;
+-QCheckBox
+box:box();
+spacing:int(-1, 99)off;
+font:font();
+-QCheckBox::indicator
+width:int(-1, 99)[px]off;
+height:int(-1, 99)[px]off;
+-QCheckBox::indicator::unchecked
+image:url();
+-QCheckBox::indicator::unchecked:hover
+image:url();
+-QCheckBox::indicator::unchecked:pressed
+image:url();
+-QCheckBox::indicator::checked
+image:url();
+-QCheckBox::indicator::checked:hover
+image:url();
+-QCheckBox::indicator::checked:pressed
+image:url();
+-QCheckBox::indicator::indeterminate
+image:url();
+-QCheckBox::indicator::indeterminate:hover
+image:url();
+-QCheckBox::indicator::indeterminate:pressed
+-QColumnView
+box:box();
+font:font();
+-QColumnView::left-arrow
+image:url();
+-QColumnView::right-arrow
+image:url();
+-QComboBox
+box:box();
+min-width:int(-1, 99)[em]off;
+font:font();
+-QComboBox:editable
+background-color:color();
+-QComboBox:!editable
+background-color:color();
+-QComboBox::drop-down
+subcontrol-origin:origin();
+subcontrol-position:alignment();
+width:int(-1, 999)[px];
+border-width:int(-1, 50)[px];
+border-color:color();
+border-style:borderstyle();
+border-radius:(-10, 20)[px];
+-QComboBox::down-arrow
+image:url();
+-QComboBox QAbstractItemView
+box:box();
+font:font();
+selection-background-color:color();
+-QDateEdit
+box:box();
+min-width:int(-1, 999)[em]off;
+-QDateTimeEdit
+box:box();
+min-width:int(-1, 999)[em]off;
+-QDialog
+background-color:color();
+background-image:url();
+background-repeat:repeat();
+background-position:alignment();
+background-clip:origin();
+background-origin:origin();
+-QDialogButtonBox
+button-layout:int(-1, 3)off;
+-QDockWidget
+color:color();
+background-color:color();
+border-color:color();
+border-style:borderstyle();
+border-width:int(-1, 20)off;
+border-radius:int(-1, 20)off;
+titlebar-close-icon:url();
+titlebar-normal-icon:url();
+-QDockWidget::title
+background:color();
+text-align:alignment();
+padding-left:int(-1, 999)[px];
+padding-right:int(-1, 999)[px];
+-QDockWidget::close-button
+background:color();
+padding:int(-1, 999)[px];
+icon-size:int(-1, 99)[px];
+subcontrol-position:alignment();
+subcontrol-origin:origin();
+position:combo(,relative,absolute);
+top:int(-1, 99)[px];
+left:int(-1, 99)[px];
+bottom:int(-1, 99)[px];
+right:int(-1, 99)[px];
+width:int(-1, 99)[px];
+-QDockWidget::float-button
+background:color();
+padding:int(-1, 999)[px];
+icon-size:int(-1, 99)[px];
+subcontrol-position:alignment();
+subcontrol-origin:origin();
+position:combo(,relative,absolute);
+top:int(-1, 99)[px];
+left:int(-1, 99)[px];
+bottom:int(-1, 99)[px];
+right:int(-1, 99)[px];
+width:int(-1, 99)[px];
+-QDoubleSpinBox
+box:box();
+font:font();
+-QDoubleSpinBox::up-button
+box:box();
+width:int(-1, 99)[px]off;
+-QDoubleSpinBox::down-button
+box:box();
+width:int(-1, 99)[px]off;
+-QDoubleSpinBox::up-arrow
+image: url();
+width:int(-1, 99)[px]off;
+height:int(-1, 99)[px]off;
+-QDoubleSpinBox::down-arrow
+image: url();
+width:int(-1, 99)[px]off;
+height:int(-1, 99)[px]off;
+-QFrame
+box:box();
+-QGroupBox
+box:box();
+margin-top:int()[ex];
+-QGroupBox::title
+background:color();
+text-align:alignment();
+padding-left:int(-1, 999)[px];
+padding-right:int(-1, 999)[px];
+subcontrol-origin:origin();
+subcontrol-position:alignment();
+padding:int(-1, 99)[px];
+background-color:color();
+-QGroupBox::indicator
+width:int(-1, 99)[px];
+height:int(-1, 99)[px];
+-QGroupBox::indicator:checked
+image:url();
+-QGroupBox::indicator:unchecked
+image:url();
+-QHeaderView
+box:box();
+-QHeaderView::section
+box:box();
+-QHeaderView::section:checked
+box:box();
+-QHeaderView::down-arrow
+image:url();
+-QHeaderView::up-arrow
+image:url();
+-QLabel
+box:box();
+font:font();
+-QLineEdit
+box:box();
+selection-color:color();
+selection-background-color:color();
+font:font();
+lineedit-password-character:int(-1, 99999)off;
+lineedit-password-mask-delay:int(-1, 99999)off;
+-QLineEdit:read-only
+box:box();
+font:font();
+-QListView
+box:box();
+alternate-background-color:color();
+show-decoration-selected:int(-1, 1);
+font:font();
+-QListView::item:alternate
+box:box();
+-QListView::item:selected
+box:box();
+-QListView::item:hover
+box:box();
+-QListWidget
+box:box();
+alternate-background-color:color();
+show-decoration-selected:int(-1, 1);
+-QListWidget::item:alternate
+box:box();
+-QListWidget::item:selected
+box:box();
+-QListWidget::item:hover
+box:box();
+-QMainWindow::separator
+background:color();
+width:int(-1, 99)off;
+height:int(-1, 99)off;
+-QMainWindow::separator:hover
+background:color();
+width:int(-1, 99)off;
+height:int(-1, 99)off;
+-QMenu
+box:box();
+font:font();
+-QMenu::item
+color:color();
+background-color:color();
+padding-left:int(-1, 99)[px];
+padding-top:int(-1, 99)[px];
+padding-right:int(-1, 99)[px];
+padding-bottom:int(-1, 99)[px];
+background-image:url();
+background-attachment:attachment();
+background-repeat:repeat();
+border-color:color();
+border-style:borderstyle();
+border-width:int(-1, 99)off;
+border-radius:int(-1, 99)off;
+-QMenu::item:selected
+color:color();
+background-color:color();
+padding-left:int(-1, 99)[px];
+padding-top:int(-1, 99)[px];
+padding-right:int(-1, 99)[px];
+padding-bottom:int(-1, 99)[px];
+background-image:url();
+background-attachment:attachment();
+background-repeat:repeat();
+border-color:color();
+border-style:borderstyle();
+border-width:int(-1, 99)off;
+border-radius:int(-1, 99)off;
+-QMenu::separator
+height:int(-1, 99)[px];
+background:color();
+margin-left:int(-1, 99)[px];
+margin-right:int(-1, 99)[px];
+-QMenu::indicator
+width:int(-1, 99)[px];
+height:int(-1, 99)[px];
+-QMenu::indicator:non-exclusive:unchecked
+image:url();
+-QMenu::indicator:non-exclusive:unchecked:selected
+image:url();
+-QMenu::indicator:non-exclusive:checked
+image:url();
+-QMenu::indicator:non-exclusive:checked:selected
+image:url();
+-QMenu::indicator:exclusive:unchecked
+image:url();
+-QMenu::indicator:exclusive:unchecked:selected
+image:url();
+-QMenu::indicator:exclusive:checked
+image:url();
+-QMenu::indicator:exclusive:checked:selected
+image:url();
+-QMenuBar
+box:box();
+font:font();
+-QMenuBar::item
+box:box();
+spacing::int(-1, 99)[px];
+padding-left:int(-1, 99)[px];
+padding-top:int(-1, 99)[px];
+padding-right:int(-1, 99)[px];
+padding-bottom:int(-1, 99)[px];
+-QMenuBar::item:selected
+box:box();
+-QMenuBar::item:pressed
+box:box();
+-QMessageBox
+messagebox-text-interaction-flags:int(-1, 32)off;
+-QProgressBar
+box:box();
+text-align:alignment();
+-QProgressBar::chunk
+box:box();
+width:int(-1, 99)[px];
+height:int(-1, 99)[px];
+margin:int(-1, 99)[px];
+-QPushButton
+box:box();
+font:font();
+min-width:(-1, 999)[px];
+-QPushButton::flat
+box:box();
+-QPushButton::pressed
+box:box();
+-QPushButton::open
+box:box();
+-QPushButton::menu-indicator
+image:url();
+subcontrol-origin:origin();
+subcontrol-position:alignment();
+-QPushButton::menu-indicator:pressed
+position:combo(,relative,absolute);
+left:int(-1, 99)[px];
+top:int(-1, 99)[px];
+right:int(-1, 99)[px];
+bottom:int(-1, 99)[px];
+-QPushButton::menu-indicator:open    
+position:combo(,relative,absolute);
+left:int(-1, 99)[px];
+top:int(-1, 99)[px];
+right:int(-1, 99)[px];
+bottom:int(-1, 99)[px];
+-QRadioButton
+box:box();
+spacing:int(-1, 99)off;
+font:font();
+-QRadioButton::indicator
+width:int(-1, 99)[px]off;
+height:int(-1, 99)[px]off;
+-QRadioButton::indicator::unchecked
+image:url();
+-QRadioButton::indicator::unchecked:hover
+image:url();
+-QRadioButton::indicator::unchecked:pressed
+image:url();
+-QRadioButton::indicator::checked
+image:url();
+-QRadioButton::indicator::checked:hover
+image:url();
+-QRadioButton::indicator::checked:pressed
+image:url();
+-QRadioButton::indicator::indeterminate
+image:url();
+-QRadioButton::indicator::indeterminate:hover
+image:url();
+-QRadioButton::indicator::indeterminate:pressed
+-QScrollBar
+box:box();
+-QScrollBar:horizontal
+height:int(-1, 999)[px];
+box:box();
+margin-left:int(-1, 999)[px];
+margin-right:int(-1, 999)[px];
+-QScrollBar::handle:horizontal
+min-width:int(-1, 999)[px]off;
+box:box();   
+-QScrollBar::add-line:horizontal
+width:int(-1, 999)[px];
+box:box();
+subcontrol-origin:origin();
+subcontrol-position:alignment();
+-QScrollBar::sub-line:horizontal
+width:int(-1, 999)[px];
+box:box();
+subcontrol-origin:origin();
+subcontrol-position:alignment();
+-QScrollBar:left-arrow:horizontal
+width:int(-1, 999)[px];
+height:int(-1, 999)[px];
+background:color();
+-QScrollBar::right-arrow:horizontal
+width:int(-1, 999)[px];
+height:int(-1, 999)[px];
+background:color();
+-QScrollBar::add-page:horizontal
+background:color();
+-QScrollBar::sub-page:horizontal
+background:color();
+-QScrollBar:vertical
+width:int(-1, 999)[px];
+box:box();
+margin-top:int(-1, 999)[px];
+margin-bottom:int(-1, 999)[px];
+-QScrollBar::handle:vertical
+min-height:int(-1, 999)[px]off;
+box:box(); 
+-QScrollBar::add-line:vertical
+height:int(-1, 999)[px];
+box:box();
+subcontrol-origin:origin();
+subcontrol-position:alignment();
+-QScrollBar::sub-line:vertical
+height:int(-1, 999)[px];
+box:box();
+subcontrol-origin:origin();
+subcontrol-position:alignment();
+-QScrollBar::up-arrow:vertical
+width:int(-1, 999)[px];
+height:int(-1, 999)[px];
+background:color();
+-QScrollBar::down-arrow:vertical
+width:int(-1, 999)[px];
+height:int(-1, 999)[px];
+background:color();
+-QScrollBar::add-page:vertical
+background:color();
+-QScrollBar::sub-page:vertical
+background:color();
+-QSizeGrip
+image:url();
+width:int(-1, 99)off;
+height:int(-1, 99)off;
+-QSlider
+box:box();
+-QSlider::groove:horizontal
+box:box();
+height:int(-1, 99)off;
+margin-top:int(-99, 99)[px];
+margin-right:int(-99, 99)[px];
+-QSlider::handle:horizontal
+box:box();
+width:int(-1, 9999)off;
+margin-top:int(-99, 99)[px];
+margin-right:int(-99, 99)[px];
+-QSlider::add-page:horizontal
+background:color();
+-QSlider::sub-page:horizontal 
+background:color();
+-QSlider::groove:vertical
+box:box();
+position:combo(,relative,absolute);
+left:int(-1, 99)off;
+right:int(-1, 99)off;
+-QSlider::handle:vertical
+box:box();
+height:int(-1, 9999)off;
+margin-top:int(-99, 99)[px];
+margin-right:int(-99, 99)[px];
+-QSlider::add-page:vertical
+background:color();
+-QSlider::sub-page:vertical 
+background:color();
+-QSpinBox
+box:box();
+font:font();
+-QSpinBox::up-button
+box:box();
+width:int(-1, 99)[px];
+-QSpinBox::down-button
+box:box();
+width:int(-1, 99)[px];
+-QSpinBox::up-arrow
+image: url();
+width:int(-1, 99)[px];
+height:int(-1, 99)[px];
+-QSpinBox::down-arrow
+image: url();
+width:int(-1, 99)[px];
+height:int(-1, 99)[px];
+-QSplitter
+box:box();
+-QSplitter::handle
+image:url();
+-QSplitter::handle:horizontal
+width:int(-1, 99)[px];
+-QSplitter::handle:vertical
+height:int(-1, 99)[px];
+-QSplitter::handle:pressed
+image:url();
+-QStatusBar
+background-color:color();
+-QStatusBar::item
+box:box();
+-QTabBar
+box:box();
+-QTabBar::tab
+background:color();
+border-color:color();
+border-style:borderstyle();
+border-width:int(-1, 99)[px];
+border-radius:int(-1, 99)[px];
+border-bottom-color:color();
+border-top-left-radius:int(-1, 99)[px];
+border-top-right-radius:int(-1, 99)[px];
+min-width:int(-1, 99)[ex];
+padding:int(-1, 99)[px];
+-QTabBar::tab:selected
+background:color();
+border-color:color();
+border-bottom-color:color();
+margin-left:int(-50, 50)[px];
+margin-right:int(-50, 50)[px];
+-QTabBar::tab:!selected
+margin-top:int(-50, 50)[px];
+-QTabBar::tab:hover
+-QTabBar::tab:first:selected
+margin-left:int(-1, 50)[px];
+-QTabBar::tab:last:selected
+margin-right:int(-1, 50)[px];
+-QTabBar::tab:only-one
+margin:int(-1, 50)[px];
+-QTabBar::tear
+image: url();
+-QTabBar::scroller
+width:int(-1, 99)[px];
+-QTabBar QToolButton
+box:box();
+-QTabBar QToolButton::right-arrow
+image:url();
+-QTabBar QToolButton::left-arrow
+image:url();
+-QTabBar::close-button
+image:url();
+subcontrol-position:alignment();
+-QTabBar::close-button:hover
+image:url();
+-QTabWidget
+qproperty-tabPosition:combo(,North, East, South, West);
+background-color:color();
+-QTabWidget::tab-bar
+position:combo(,relative,absolute);
+left:int(-1, 99)off;
+right:int(-1, 99)off;
+subcontrol-origin:origin();
+subcontrol-position:alignment();
+-QTabWidget::pane
+box:box();
+position:combo(,relative,absolute);
+top:int(-50, 50)off;
+-QTableView
+box:box();
+selection-color:color();
+selection-background-color:color();
+alternate-background-color:color();
+gridline-color::color();
+-QTableView QTableCornerButton::section
+box:box();
+-QTableWidget
+box:box();
+selection-color:color();
+selection-background-color:color();
+alternate-background-color:color();
+gridline-color::color();
+-QTableWidget QTableCornerButton::section
+box:box();
+-QTextEdit
+box:box();
+selection-color:color();
+selection-background-color:color();
+-QTimeEdit
+box:box();
+font:font();
+-QTimeEdit::up-button
+box:box();
+width:int(-1, 99)[px];
+-QTimeEdit::down-button
+box:box();
+width:int(-1, 99)[px];
+-QTimeEdit::up-arrow
+image: url();
+width:int(-1, 99)[px];
+height:int(-1, 99)[px];
+-QTimeEdit::down-arrow
+image: url();
+width:int(-1, 99)[px];
+height:int(-1, 99)[px];
+-QToolBar
+box:box();
+-QToolBar::separator
+image:url();
+background:color();
+width:int(-1, 99)off;
+height:int(-1, 99)off;
+-QToolBar::handle
+image:url();
+-QToolBar::handle:horizontal
+image:url();
+width:int(-1, 99)[px];
+-QToolBar::handle:vertical
+image:url();
+height:int(-1, 99)[px];
+-QToolButton
+box:box();
+-QToolButton:pressed
+box:box();
+-QToolButton::menu-button
+box:box();
+-QToolButton::menu-arrow
+image:url();
+-QToolButton::menu-arrow:open
+top:int(-1, 10)[px];
+left:int(-1, 10)[px];
+right:int(-1, 10)[px];
+bottom:int(-1, 10)[px];
+-QToolBox
+box:box();
+font:font();
+-QToolBox::tab
+box:box();
+font:font();
+-QToolBox::tab:selected 
+box:box();
+font:font();
+-QToolTip
+box:box();
+font:font();
+-QTreeView
+alternate-background-color:color();
+show-decoration-selected:int(-1, 1)off;
+-QTreeView::item
+border-width::int(-1, 10)off;
+border-style:borderstyle();
+border-color:color();
+background-color:color();
+-QTreeView::item:hover
+border-width::int(-1, 10)off;
+border-style:borderstyle();
+border-color:color();
+background-color:color();
+-QTreeView::item:selected
+border-width::int(-1, 10)off;
+border-style:borderstyle();
+border-color:color();
+background-color:color();
+-QTreeView::item:selected:active
+border-width::int(-1, 10)off;
+border-style:borderstyle();
+border-color:color();
+background-color:color();
+-QTreeView::item:selected:!active
+border-width::int(-1, 10)off;
+border-style:borderstyle();
+border-color:color();
+background-color:color();
+-QTreeView::branch
+border-image:url();
+background-color:color();
+-QTreeView::branch:has-siblings:!adjoins-item
+border-image:url();
+background-color:color();
+-QTreeView::branch:has-siblings:adjoins-item
+border-image:url();
+background-color:color();
+-QTreeView::branch:!has-children:!has-siblings:adjoins-item
+border-image:url();
+background-color:color();
+-QTreeView::branch:closed:has-children:has-siblings
+border-image:url();
+background-color:color();
+-QTreeView::branch:has-children:!has-siblings:closed
+border-image:url();
+background-color:color();
+-QTreeView::branch:open:has-children:has-siblings
+border-image:url();
+background-color:color();
+-QTreeView::branch:open:has-children:!has-siblings
+border-image:url();
+background-color:color();
+-QTreeWidget
+alternate-background-color:color();
+show-decoration-selected:int(-1, 1)off;
+-QTreeWidget::item
+border-width::int(-1, 10)off;
+border-style:borderstyle();
+border-color:color();
+background-color:color();
+-QTreeWidget::item:hover
+border-width::int(-1, 10)off;
+border-style:borderstyle();
+border-color:color();
+background-color:color();
+-QTreeWidget::item:selected
+border-width::int(-1, 10)off;
+border-style:borderstyle();
+border-color:color();
+background-color:color();
+-QTreeWidget::item:selected:active
+border-width::int(-1, 10)off;
+border-style:borderstyle();
+border-color:color();
+background-color:color();
+-QTreeWidget::item:selected:!active
+border-width::int(-1, 10)off;
+border-style:borderstyle();
+border-color:color();
+background-color:color();
+-QTreeWidget::branch
+border-image:url();
+background-color:color();
+-QTreeWidget::branch:has-siblings:!adjoins-item
+border-image:url();
+background-color:color();
+-QTreeWidget::branch:has-siblings:adjoins-item
+border-image:url();
+background-color:color();
+-QTreeWidget::branch:!has-children:!has-siblings:adjoins-item
+border-image:url();
+background-color:color();
+-QTreeWidget::branch:closed:has-children:has-siblings
+border-image:url();
+background-color:color();
+-QTreeWidget::branch:has-children:!has-siblings:closed
+border-image:url();
+background-color:color();
+-QTreeWidget::branch:open:has-children:has-siblings
+border-image:url();
+background-color:color();
+-QTreeWidget::branch:open:has-children:!has-siblings
+border-image:url();
+background-color:color();

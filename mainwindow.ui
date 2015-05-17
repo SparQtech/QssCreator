@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>749</width>
+    <height>465</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QSS Creator</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QSplitter" name="Splitter">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="tabPosition">
+        <enum>QTabWidget::South</enum>
+       </property>
+       <property name="tabShape">
+        <enum>QTabWidget::Rounded</enum>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <property name="tabsClosable">
+        <bool>false</bool>
+       </property>
+       <widget class="QWidget" name="tabMain">
+        <attribute name="title">
+         <string>Preview</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>2</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>2</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="labelClasses">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Courier New</family>
+               <pointsize>10</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
+               <stylestrategy>NoAntialias</stylestrategy>
+              </font>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Plain</enum>
+             </property>
+             <property name="lineWidth">
+              <number>0</number>
+             </property>
+             <property name="text">
+              <string>Classes</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBoxHighlight">
+             <property name="minimumSize">
+              <size>
+               <width>36</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>36</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Widgets Highlighting</string>
+             </property>
+             <property name="text">
+              <string notr="true"/>
+             </property>
+             <property name="icon">
+              <iconset resource="qsscreator.qrc">
+               <normaloff>:/res/cursor.png</normaloff>:/res/cursor.png</iconset>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="tristate">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBoxApplyQss">
+           <property name="title">
+            <string>Apply QSS</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <property name="leftMargin">
+             <number>6</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QRadioButton" name="radioBtnCreatedQss">
+              <property name="text">
+               <string>Created QSS</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioBtnLoadedQss">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Loaded QSS</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioBtnBothQss">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Both QSS</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QScrollArea" name="scrollArea">
+           <property name="mouseTracking">
+            <bool>true</bool>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>413</width>
+              <height>76</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_5"/>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tabHelp">
+        <attribute name="title">
+         <string>Help</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tabExport">
+        <attribute name="title">
+         <string>Export QSS</string>
+        </attribute>
+       </widget>
+      </widget>
+      <widget class="QPlainTextEdit" name="plainTextCons">
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>0</red>
+             <green>255</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>40</red>
+             <green>40</green>
+             <blue>40</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>0</red>
+             <green>255</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>40</red>
+             <green>40</green>
+             <blue>40</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>111</red>
+             <green>110</green>
+             <blue>108</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>223</red>
+             <green>220</green>
+             <blue>217</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
+       <property name="font">
+        <font>
+         <family>Courier New</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="undoRedoEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="plainText">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>749</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <widget class="QMenu" name="menuExport_as_QSS">
+     <property name="title">
+      <string>Export as QSS</string>
+     </property>
+     <addaction name="actionExportCreatedQSS"/>
+     <addaction name="actionExportGeneralQSS"/>
+    </widget>
+    <addaction name="actionNewTemplate"/>
+    <addaction name="actionOpenTemplate"/>
+    <addaction name="actionRecentStyleTemplates"/>
+    <addaction name="separator"/>
+    <addaction name="actionSaveTemplate"/>
+    <addaction name="actionSaveTemplateAs"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpenUIFile"/>
+    <addaction name="actionLoadUifile"/>
+    <addaction name="separator"/>
+    <addaction name="actionNewExtQssFile"/>
+    <addaction name="actionOpenQssFile"/>
+    <addaction name="actionRecentQssFiles"/>
+    <addaction name="separator"/>
+    <addaction name="actionSaveExternalQssFile"/>
+    <addaction name="actionSaveExternalQssAs"/>
+    <addaction name="separator"/>
+    <addaction name="menuExport_as_QSS"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>Window</string>
+    </property>
+    <addaction name="actionShowConsole"/>
+    <addaction name="actionShowSideBar"/>
+    <addaction name="actionShowIntQssEditor"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout_Qt"/>
+    <addaction name="actionOfflineHelp"/>
+    <addaction name="actionExamples"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNewTemplate"/>
+   <addaction name="actionOpenTemplate"/>
+   <addaction name="actionRecentStyleTemplates"/>
+   <addaction name="actionSaveTemplate"/>
+   <addaction name="separator"/>
+   <addaction name="actionOpenUIFile"/>
+   <addaction name="separator"/>
+   <addaction name="actionNewExtQssFile"/>
+   <addaction name="actionOpenQssFile"/>
+   <addaction name="actionRecentQssFiles"/>
+   <addaction name="actionSaveExternalQssFile"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="styleToolBar">
+   <property name="windowTitle">
+    <string notr="true">toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="minimumSize">
+    <size>
+     <width>250</width>
+     <height>250</height>
+    </size>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::AllDockWidgetAreas</set>
+   </property>
+   <property name="windowTitle">
+    <string>Qt Style Sheets</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <property name="leftMargin">
+      <number>4</number>
+     </property>
+     <property name="topMargin">
+      <number>4</number>
+     </property>
+     <property name="rightMargin">
+      <number>4</number>
+     </property>
+     <property name="bottomMargin">
+      <number>4</number>
+     </property>
+     <item>
+      <widget class="QToolBox" name="toolBox">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <property name="tabSpacing">
+        <number>4</number>
+       </property>
+       <widget class="QWidget" name="pageStyleSheet">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>242</width>
+          <height>286</height>
+         </rect>
+        </property>
+        <attribute name="icon">
+         <iconset>
+          <normaloff>:/res/script.png</normaloff>:/res/script.png</iconset>
+        </attribute>
+        <attribute name="label">
+         <string>Widgets Styles</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="pageCodeEdit">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>242</width>
+          <height>286</height>
+         </rect>
+        </property>
+        <attribute name="icon">
+         <iconset resource="qsscreator.qrc">
+          <normaloff>:/res/script_code.png</normaloff>:/res/script_code.png</iconset>
+        </attribute>
+        <attribute name="label">
+         <string>QSS Code</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="pageDigger">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>242</width>
+          <height>286</height>
+         </rect>
+        </property>
+        <attribute name="label">
+         <string>Deep Digging</string>
+        </attribute>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockEditorWidget">
+   <property name="windowTitle">
+    <string>External QSS File</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+   </widget>
+  </widget>
+  <action name="actionNewTemplate">
+   <property name="icon">
+    <iconset resource="qsscreator.qrc">
+     <normaloff>:/res/template_new.png</normaloff>:/res/template_new.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New Style Template</string>
+   </property>
+   <property name="toolTip">
+    <string>Create new Style Sheet template</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionOpenTemplate">
+   <property name="icon">
+    <iconset resource="qsscreator.qrc">
+     <normaloff>:/res/template_open.png</normaloff>:/res/template_open.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open Style Template</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSaveTemplate">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="qsscreator.qrc">
+     <normaloff>:/res/template_save.png</normaloff>:/res/template_save.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save Style Template</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSaveTemplateAs">
+   <property name="icon">
+    <iconset resource="qsscreator.qrc">
+     <normaloff>:/res/template_save_as.png</normaloff>:/res/template_save_as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Template &amp;As...</string>
+   </property>
+  </action>
+  <action name="separator">
+   <property name="text">
+    <string notr="true">-</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::QuitRole</enum>
+   </property>
+  </action>
+  <action name="actionLoadUifile">
+   <property name="icon">
+    <iconset resource="qsscreator.qrc">
+     <normaloff>:/res/form.png</normaloff>:/res/form.png</iconset>
+   </property>
+   <property name="text">
+    <string>Load UI from Resources</string>
+   </property>
+   <property name="toolTip">
+    <string>Load UI Form file</string>
+   </property>
+  </action>
+  <action name="actionAbout_Qt">
+   <property name="text">
+    <string>About Qt</string>
+   </property>
+   <property name="toolTip">
+    <string>About Qt Framework</string>
+   </property>
+  </action>
+  <action name="actionOpenQssFile">
+   <property name="icon">
+    <iconset resource="qsscreator.qrc">
+     <normaloff>:/res/qss_open.png</normaloff>:/res/qss_open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open External &amp;QSS File</string>
+   </property>
+   <property name="toolTip">
+    <string>Open an external QSS file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+O</string>
+   </property>
+  </action>
+  <action name="separator_2">
+   <property name="text">
+    <string notr="true">Undo</string>
+   </property>
+  </action>
+  <action name="actionShowConsole">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show Console</string>
+   </property>
+  </action>
+  <action name="separator_3">
+   <property name="text">
+    <string notr="true">-</string>
+   </property>
+  </action>
+  <action name="actionShowSideBar">
+   <property name="text">
+    <string>Show Side Bar</string>
+   </property>
+  </action>
+  <action name="actionRecentStyleTemplates">
+   <property name="icon">
+    <iconset resource="qsscreator.qrc">
+     <normaloff>:/res/template_recent.png</normaloff>:/res/template_recent.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Recent Style Templates</string>
+   </property>
+   <property name="toolTip">
+    <string>Open a recent Style Template file</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionRecentQssFiles">
+   <property name="icon">
+    <iconset resource="qsscreator.qrc">
+     <normaloff>:/res/qss_recent.png</normaloff>:/res/qss_recent.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Recent QSS Files</string>
+   </property>
+   <property name="toolTip">
+    <string>Open a recent QSS file</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionShowIntQssEditor">
+   <property name="text">
+    <string>Show External QSS File Editor</string>
+   </property>
+  </action>
+  <action name="actionNewExtQssFile">
+   <property name="icon">
+    <iconset resource="qsscreator.qrc">
+     <normaloff>:/res/qss_new.png</normaloff>:/res/qss_new.png</iconset>
+   </property>
+   <property name="text">
+    <string>N&amp;ew External QSS File</string>
+   </property>
+   <property name="toolTip">
+    <string>Create new external QSS file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+N</string>
+   </property>
+  </action>
+  <action name="actionOfflineHelp">
+   <property name="text">
+    <string>Offline Help</string>
+   </property>
+  </action>
+  <action name="actionSaveExternalQssFile">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="qsscreator.qrc">
+     <normaloff>:/res/qss_save.png</normaloff>:/res/qss_save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save &amp;External QSS File</string>
+   </property>
+   <property name="toolTip">
+    <string>Save external QSS file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionSaveExternalQssAs">
+   <property name="icon">
+    <iconset resource="qsscreator.qrc">
+     <normaloff>:/res/qss_save_as.png</normaloff>:/res/qss_save_as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sav&amp;e External QSS As...</string>
+   </property>
+  </action>
+  <action name="actionExportCreatedQSS">
+   <property name="icon">
+    <iconset resource="qsscreator.qrc">
+     <normaloff>:/res/script_code.png</normaloff>:/res/script_code.png</iconset>
+   </property>
+   <property name="text">
+    <string>Created QSS</string>
+   </property>
+  </action>
+  <action name="actionExportGeneralQSS">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="qsscreator.qrc">
+     <normaloff>:/res/script_code_red.png</normaloff>:/res/script_code_red.png</iconset>
+   </property>
+   <property name="text">
+    <string>Both QSS (External + Internal)</string>
+   </property>
+  </action>
+  <action name="actionOpenUIFile">
+   <property name="icon">
+    <iconset resource="qsscreator.qrc">
+     <normaloff>:/res/form.png</normaloff>:/res/form.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open UI File</string>
+   </property>
+  </action>
+  <action name="actionExamples">
+   <property name="text">
+    <string>Examples</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="qsscreator.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>374</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionShowSideBar</sender>
+   <signal>triggered()</signal>
+   <receiver>dockWidget</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>124</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionShowIntQssEditor</sender>
+   <signal>triggered()</signal>
+   <receiver>dockEditorWidget</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>374</x>
+     <y>424</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionShowConsole</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plainTextCons</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>327</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GradientDialog</class>
+ <widget class="QDialog" name="GradientDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>468</width>
+    <height>679</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gradient Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>450</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="verticalSpacing">
+      <number>0</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QComboBox" name="comboGrad">
+       <property name="currentText">
+        <string notr="true">qlineargradient</string>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">qlineargradient</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">qradialgradient</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">qconicalgradient</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QDoubleSpinBox" name="dSpinX1">
+       <property name="specialValueText">
+        <string notr="true"/>
+       </property>
+       <property name="prefix">
+        <string notr="true">x1:</string>
+       </property>
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="minimum">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QDoubleSpinBox" name="dSpinStop0">
+       <property name="specialValueText">
+        <string notr="true"/>
+       </property>
+       <property name="prefix">
+        <string notr="true">stop: </string>
+       </property>
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="minimum">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLineEdit" name="colorEdit0">
+       <property name="maximumSize">
+        <size>
+         <width>72</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="inputMask">
+        <string notr="true">\#HHHHHH</string>
+       </property>
+       <property name="text">
+        <string notr="true">#000</string>
+       </property>
+       <property name="placeholderText">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QToolButton" name="btnColor0">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string notr="true">...</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QDoubleSpinBox" name="radiusSpinBox">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="prefix">
+        <string notr="true">radius: </string>
+       </property>
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="minimum">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>2.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value">
+        <double>0.500000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QDoubleSpinBox" name="dSpinY1">
+       <property name="specialValueText">
+        <string notr="true"/>
+       </property>
+       <property name="prefix">
+        <string notr="true">y1:</string>
+       </property>
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="minimum">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QDoubleSpinBox" name="dSpinStop1">
+       <property name="specialValueText">
+        <string notr="true"/>
+       </property>
+       <property name="prefix">
+        <string notr="true">stop: </string>
+       </property>
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="minimum">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLineEdit" name="colorEdit1">
+       <property name="maximumSize">
+        <size>
+         <width>72</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="inputMask">
+        <string notr="true">\#HHHHHH</string>
+       </property>
+       <property name="text">
+        <string notr="true">#fff</string>
+       </property>
+       <property name="placeholderText">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4">
+      <widget class="QToolButton" name="btnColor1">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string notr="true">...</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QSpinBox" name="angleSpinBox">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="wrapping">
+        <bool>true</bool>
+       </property>
+       <property name="suffix">
+        <string/>
+       </property>
+       <property name="prefix">
+        <string notr="true">angle: </string>
+       </property>
+       <property name="maximum">
+        <number>359</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QDoubleSpinBox" name="dSpinX2">
+       <property name="specialValueText">
+        <string notr="true"/>
+       </property>
+       <property name="prefix">
+        <string notr="true">x2:</string>
+       </property>
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="minimum">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QDoubleSpinBox" name="dSpinStop2">
+       <property name="specialValueText">
+        <string notr="true"/>
+       </property>
+       <property name="prefix">
+        <string notr="true">stop: </string>
+       </property>
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="minimum">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value">
+        <double>0.300000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLineEdit" name="colorEdit2">
+       <property name="maximumSize">
+        <size>
+         <width>72</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="inputMask">
+        <string notr="true">\#HHHHHH</string>
+       </property>
+       <property name="text">
+        <string notr="true">#</string>
+       </property>
+       <property name="placeholderText">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="QToolButton" name="btnColor2">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string notr="true">...</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="btnReset">
+       <property name="font">
+        <font>
+         <stylestrategy>NoAntialias</stylestrategy>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="text">
+        <string>Reset XY</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QDoubleSpinBox" name="dSpinY2">
+       <property name="specialValueText">
+        <string notr="true"/>
+       </property>
+       <property name="prefix">
+        <string notr="true">y2:</string>
+       </property>
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="minimum">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QDoubleSpinBox" name="dSpinStop3">
+       <property name="specialValueText">
+        <string notr="true"/>
+       </property>
+       <property name="prefix">
+        <string notr="true">stop: </string>
+       </property>
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="minimum">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value">
+        <double>0.700000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLineEdit" name="colorEdit3">
+       <property name="maximumSize">
+        <size>
+         <width>72</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="inputMask">
+        <string notr="true">\#HHHHHH</string>
+       </property>
+       <property name="text">
+        <string notr="true">#</string>
+       </property>
+       <property name="placeholderText">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4">
+      <widget class="QToolButton" name="btnColor3">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string notr="true">...</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPlainTextEdit" name="gradientTextEdit">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>72</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Courier New</family>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>comboGrad</tabstop>
+  <tabstop>dSpinX1</tabstop>
+  <tabstop>dSpinY1</tabstop>
+  <tabstop>dSpinX2</tabstop>
+  <tabstop>dSpinY2</tabstop>
+  <tabstop>dSpinStop0</tabstop>
+  <tabstop>dSpinStop1</tabstop>
+  <tabstop>dSpinStop2</tabstop>
+  <tabstop>dSpinStop3</tabstop>
+  <tabstop>colorEdit0</tabstop>
+  <tabstop>btnColor0</tabstop>
+  <tabstop>colorEdit1</tabstop>
+  <tabstop>btnColor1</tabstop>
+  <tabstop>colorEdit2</tabstop>
+  <tabstop>btnColor2</tabstop>
+  <tabstop>colorEdit3</tabstop>
+  <tabstop>btnColor3</tabstop>
+  <tabstop>radiusSpinBox</tabstop>
+  <tabstop>angleSpinBox</tabstop>
+  <tabstop>btnReset</tabstop>
+  <tabstop>gradientTextEdit</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>comboGrad</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>changeGradType(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>58</x>
+     <y>488</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>39</x>
+     <y>65</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radiusSpinBox</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>createOutputCode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>517</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>66</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>angleSpinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>createOutputCode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>129</x>
+     <y>537</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>121</x>
+     <y>345</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dSpinX1</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>createOutputCode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>238</x>
+     <y>494</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>102</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dSpinY1</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>createOutputCode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>238</x>
+     <y>517</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>180</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dSpinX2</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>createOutputCode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>238</x>
+     <y>540</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>219</x>
+     <y>361</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dSpinY2</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>createOutputCode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>210</x>
+     <y>554</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>214</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dSpinStop0</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>createOutputCode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>345</x>
+     <y>489</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>281</x>
+     <y>257</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dSpinStop1</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>createOutputCode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>345</x>
+     <y>513</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>314</x>
+     <y>292</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dSpinStop2</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>createOutputCode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>345</x>
+     <y>537</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>325</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dSpinStop3</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>createOutputCode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>345</x>
+     <y>561</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>250</x>
+     <y>374</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>colorEdit0</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>createOutputCode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>423</x>
+     <y>488</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>colorEdit1</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>createOutputCode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>423</x>
+     <y>512</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>435</x>
+     <y>308</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>colorEdit2</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>createOutputCode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>414</x>
+     <y>518</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>435</x>
+     <y>344</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>colorEdit3</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>createOutputCode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>397</x>
+     <y>554</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>407</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnColor0</sender>
+   <signal>clicked()</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>setColor0()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>457</x>
+     <y>488</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>467</x>
+     <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnColor1</sender>
+   <signal>clicked()</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>setColor1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>457</x>
+     <y>512</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>467</x>
+     <y>291</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnColor2</sender>
+   <signal>clicked()</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>setColor2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>435</x>
+     <y>519</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>467</x>
+     <y>360</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnColor3</sender>
+   <signal>clicked()</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>setColor3()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>439</x>
+     <y>547</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>467</x>
+     <y>394</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>colorEdit0</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>setColorBtn0()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>423</x>
+     <y>488</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>377</x>
+     <y>433</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>colorEdit1</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>setColorBtn1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>423</x>
+     <y>512</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>472</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>colorEdit2</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>setColorBtn2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>392</x>
+     <y>524</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>392</x>
+     <y>534</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>colorEdit3</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>setColorBtn3()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>367</x>
+     <y>546</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>464</x>
+     <y>566</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>setOut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>313</x>
+     <y>654</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>291</x>
+     <y>677</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>442</x>
+     <y>662</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>452</x>
+     <y>675</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnReset</sender>
+   <signal>clicked()</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>ResetXY()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>29</x>
+     <y>554</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>554</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>GradientDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>233</x>
+     <y>658</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>233</x>
+     <y>339</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>createOutputCode()</slot>
+  <slot>changeGradType(int)</slot>
+  <slot>setColor0()</slot>
+  <slot>setColor1()</slot>
+  <slot>setColor2()</slot>
+  <slot>setColor3()</slot>
+  <slot>setColorBtn0()</slot>
+  <slot>setColorBtn1()</slot>
+  <slot>setColorBtn2()</slot>
+  <slot>setColorBtn3()</slot>
+  <slot>setOut()</slot>
+  <slot>ResetXY()</slot>
+ </slots>
+</ui>

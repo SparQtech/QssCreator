@@ -1,0 +1,39 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/info.png</file>
+        <file>res/gradient.png</file>
+        <file>res/color.png</file>
+        <file>res/solid.png</file>
+        <file>res/dotted.png</file>
+        <file>res/double.png</file>
+        <file>res/dashed.png</file>
+        <file>res/dot-dash.png</file>
+        <file>res/dot-dot-dash.png</file>
+        <file>res/ridge.png</file>
+        <file>res/groove.png</file>
+        <file>res/outset.png</file>
+        <file>res/inset.png</file>
+        <file>res/wordlist.txt</file>
+        <file>res/template_new.png</file>
+        <file>res/template_open.png</file>
+        <file>res/template_save.png</file>
+        <file>res/template_recent.png</file>
+        <file>res/qss_new.png</file>
+        <file>res/form.png</file>
+        <file>res/cursor.png</file>
+        <file>res/cursor_h.png</file>
+        <file>res/qss_save.png</file>
+        <file>res/qss_open.png</file>
+        <file>res/qss_recent.png</file>
+        <file>res/wait.gif</file>
+        <file>res/help.png</file>
+        <file>res/qsscreator_logo.png</file>
+        <file>qsscreator.ico</file>
+        <file>res/default.ui</file>
+        <file>res/default.tqss</file>
+        <file>res/template_save_as.png</file>
+        <file>res/qss_save_as.png</file>
+        <file>res/script_code.png</file>
+        <file>res/script_code_red.png</file>
+    </qresource>
+</RCC>
